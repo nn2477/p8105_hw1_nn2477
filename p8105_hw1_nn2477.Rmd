@@ -7,28 +7,16 @@ output: github_document
 
 **Problem 1** 
 ```{r}
+#loading necessary library & data
+
 library(tidyverse)
 library("moderndive")
 data("early_january_weather")
 
-#finding the variables in data set
-names(early_january_weather)
-
-#display total number of rows in dataset
-nrow(early_january_weather)
-
-#display total number of columns in dataset
-ncol(early_january_weather)
-
-#finding mean for variable temp
-mean(early_january_weather$temp)
-
-#finding the sd for variable temp 
-sd(early_january_weather$temp)
 ```
 
 
-**Data set description:** This data set contains weather factors for the first half of January 2013. It has 358 observations and 15 variables, including dew point, humidity, wind characteristics, precipitation, and pressure. The mean temperature for the first half of January 2013 was 39.58 degrees Fahrenheit with a standard deviation of 7.06. 
+**Data set description:** This data set contains weather factors for the first half of January 2013. It has `r nrow(early_january_weather)` and `r ncol(early_january_weather)`, including `r names(early_january_weather)`. The mean of `temp` for the first half of January 2013 was `r mean(early_january_weather$temp)` degrees Fahrenheit with a standard deviation of `r sd(early_january_weather$temp)`.
 
 
 **Creating scatter plot and saving graph**
