@@ -80,13 +80,13 @@ mean_random_sample = mean(pull(df, random_sample))
 print(mean_random_sample)
 
 mean_log_vec = mean(pull(df, logical_vector))
-print(mean_logical_vector)
+print(mean_log_vec)
 
 mean_char_vec = mean(pull(df, character_vector))
-print(mean_character_vector)
+print(mean_char_vec)
 
 mean_fact_vec = mean(pull(df, factor_vector))
-print(mean_factor_vector)
+print(mean_fact_vec)
 ```
 
 I was able to take the mean for the variables "random_sample" and "logical_vector" because it contains numeric and/or logical values. I was unable to take the mean for variables "character_vector" and "factor_vector" because it is not a numeric and/or logical outputs. 
@@ -98,7 +98,7 @@ numeric_logical <- as.numeric(df$logical_vector)
 ```
 
 
-Using the as.numeric() function on the logical vector converts 'true' values to 1 and 'false' values to 0. This conversion makes sense because 'true' and 'false' are usually treated as 1 and 0 in many data sets. This explains why when we take the mean of the "logical_vector" variable, our output is 0.5 as that is the average. 
+Using the as.numeric() function on the logical vector converts 'true' values to 1 and 'false' values to 0. This conversion makes sense because 'true' and 'false' are usually treated as 1 and 0 in many data sets. This explains why when we take the mean of the "logical_vector" variable, we will get a value between 0 and 1. 
 
 
 ```{r}
