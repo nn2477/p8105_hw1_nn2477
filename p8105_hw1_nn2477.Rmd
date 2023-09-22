@@ -13,7 +13,6 @@ data("early_january_weather")
 
 #finding the variables in data set
 names(early_january_weather)
-early_january_weather
 
 #display total number of rows in dataset
 nrow(early_january_weather)
